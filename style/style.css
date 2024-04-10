@@ -1,0 +1,12 @@
+.articles{
+  background-color: aqua;
+  .article{
+    background-color: beige;
+    display: flex;
+    padding: 2rem;
+    max-width: 60%;
+    .img{
+      max-width: 15%;
+    }
+  }
+}
