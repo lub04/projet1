@@ -1,12 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #EDE52B;
+  --secondary-color: #C4C3BE;
+  --third-color: #AAD2BA;
+
+}
 .articles{
   background-color: aqua;
   .article{
-    background-color: beige;
+    background-color: var(--secondary-color);
     display: flex;
     padding: 2rem;
-    max-width: 60%;
+    width: 70%;
+    gap: 2rem;
     .img{
-      max-width: 15%;
+      max-width: 25%;
     }
+    .description{
+      background-color: brown;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+      .nom-restaurant{
+        background-color: blueviolet;
+      }
+      .text-description{
+        background-color: aquamarine;
+      }
+      .propriete{
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+      }
+      .lien-site{
+        background-color: #EDE52B;
+      }
+      .notation{
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
   }
 }
