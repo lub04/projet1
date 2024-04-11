@@ -10,3 +10,23 @@
   --paragraph-font: "Rhodium Libre", serif;
   --text-spacing: 1rem;
 }
+
+.filtres {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 2rem;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+  font-family: var(--paragraph-font);
+  font-size: small;
+  border-radius: var(--main-border-radius);
+  width: 13%;
+  position: fixed;
+
+  h3 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
