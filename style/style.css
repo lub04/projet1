@@ -13,11 +13,13 @@
 .articles{
   background-color: aqua;
   width: 75%;
+  margin-left: auto;
   .article{
     box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.68);
     -webkit-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.68);
     border-radius: var(--main-border-radius); 
     background-color: var(--secondary-color);
+    margin: auto;
     display: flex;
     padding: 2rem;
     width: 90%;
@@ -51,6 +53,22 @@
         background-color: cadetblue;
         display: flex;
         justify-content: center;
+        direction: rtl;
+        .star{
+          color: #aaa;
+          text-decoration: none;
+          font-size: 2rem;
+          transition: color .4s;
+          
+        }
+        .star:hover,
+        .star:focus{
+          color: orange;
+          cursor: pointer;
+        }
+        .star:hover ~ .star,
+        .star:focus ~ .star{
+          color: orange;
       }
     }
 
