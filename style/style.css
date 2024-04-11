@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #EDE52B;
+  --secondary-color: #C4C3BE;
+  --third-color: #AAD2BA;
+  --main-border-radius : 20px;
+  --title-font: "Lobster", sans-serif;
+  --paragraph-font: "Rhodium Libre", serif;
+  --text-spacing: 1rem;
+  button{
+    width: 6rem;
+    border-radius: var(--main-border-radius);
+    height: 1.5rem;
+    background-color: var(--third-color);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+  }
+  button:hover{
+    background-color: #6b8676 ;
+    cursor: pointer;
+  }
+
+}
+/* Lubin code */
+.articles{
+  h2{
+    font-family: var(--title-font);
+    font-size: 2.2rem;
+  }
+  a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+  }
+  a:hover{
+    text-decoration: underline;
+    color:#7e7a19;
+  }
+  font-family: var(--paragraph-font);
+  width: 75%;
+  margin-left: auto;
+  .article{
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+    border-radius: var(--main-border-radius); 
+    background-color: var(--secondary-color);
+    margin: auto;
+    display: flex;
+    padding: 0.5rem 2rem;
+    width: 90%;
+    gap: 2rem;
+    align-items: center;
+    .img{
+      max-height: 25rem;
+      max-width: 17rem;
+      border-radius: var(--main-border-radius);
+    }
+    .description{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+      .text-description{
+        width: 90%;
+        height: 7rem;
+        overflow: scroll;
+      }
+      .propriete-notation{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .buton{
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          justify-content: center;
+          #note{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            border: 2px solid var(--third-color);
+          }
+        }
+        .propriete{
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .notation{
+          display: flex;
+          justify-content: center;
+          direction: rtl;
+          .star{
+            color: #aaa;
+            text-decoration: none;
+            font-size: 2rem;
+            transition: color .4s;
+          }
+          .star:hover,
+          .star:focus{
+            color: orange;
+            cursor: pointer;
+          }
+          .star:hover ~ .star,
+          .star:focus ~ .star{
+            color: orange;
+        }
+      }
+    }
+
+  }
+}
+}
+
+@media screen and (max-width: 992px) {
+  .articles{
+    margin: auto;
+    width: 100%;
+    .article{
+      flex-direction: column;
+      align-items: center;
+      .img{
+        max-width: 75%;
+      }
+      .description{
+        align-items: center;
+        .propriete-notation{
+          .propriete{
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .articles{
+    .article{
+      .description{
+        .text-description{
+          height: 3.5rem;
+        }
+      }
+    }
+  }
+}
+/* Fin Lubin code */
