@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restomato | Trouver un resto devient rigolo</title>
-    <!-- liens vers les polices -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&family=Rhodium+Libre&display=swap"
-      rel="stylesheet"
-    />
-    <!-- style -->
-    <link rel="stylesheet" href="style/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restomato | Trouver un resto devient rigolo</title>
+  <!-- liens vers les polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rhodium+Libre&display=swap" rel="stylesheet">
+  <!-- style -->
+  <link rel="stylesheet" href="style/style.css">
+</head>
   <body>
     <header> </header>
     <main>
@@ -49,6 +43,7 @@
             <label for="city">Tassin la Demi Lune</label>
           </div>
         </div>
+
 
         <div class="foodtype filtre">
           <h3>Type</h3>
@@ -107,6 +102,30 @@
             <label for="restaurant">Fast-Food</label>
           </div>
         </div>
+        
+        <div class="notation filtre">
+          <h3>Note</h3>
+          <div>
+            <input type="radio" id="note1" name="notation" value="notation" />
+            <label for="notation">1/5</label>
+          </div>
+          <div>
+            <input type="radio" id="note2" name="notation" value="notation" />
+            <label for="notation">2/5</label>
+          </div>
+          <div>
+            <input type="radio" id="note3" name="notation" value="notation" />
+            <label for="notation">3/5</label>
+          </div>
+          <div>
+            <input type="radio" id="note4" name="notation" value="notation" />
+            <label for="notation">4/5</label>
+          </div>
+          <div>
+            <input type="radio" id="note5" name="notation" value="notation" />
+            <label for="notation">5/5</label>
+          </div>
+        </div>
 
         <!-- <div class="vegetarien filtre">
           <h3>Type de plat</h3>
@@ -135,34 +154,46 @@
             <label for="price">Gros budget</label>
           </div>
         </div> -->
-
-        <div class="notation filtre">
-          <h3>Note</h3>
-          <div>
-            <input type="radio" id="note1" name="notation" value="notation" />
-            <label for="notation">1/5</label>
-          </div>
-          <div>
-            <input type="radio" id="note2" name="notation" value="notation" />
-            <label for="notation">2/5</label>
-          </div>
-          <div>
-            <input type="radio" id="note3" name="notation" value="notation" />
-            <label for="notation">3/5</label>
-          </div>
-          <div>
-            <input type="radio" id="note4" name="notation" value="notation" />
-            <label for="notation">4/5</label>
-          </div>
-          <div>
-            <input type="radio" id="note5" name="notation" value="notation" />
-            <label for="notation">5/5</label>
-          </div>
-        </div>
+      
       </section>
+      <section class="articles">
+        <article class="article">
+          <img class="img" src="assets/images/l'abstrait.jpg" alt="logo du restaurant l'abstrait">
+          <div class="description">
+            <h2 class="nom-restaurant">L'abstrait</h2>
+            <p class="text-description">
+              Restaurant bistronomique et cuisine au comptoir sont les deux concepts développés par Dorian Foulquier au 97 rue Victor-Hugo à L’Abstrait.
+              Pour vous accueillir le personnel dynamique montre un haut niveau d'hospitalité dans ce restaurant.
+            </p>
+            <p class="lien-site"><a href="">Cliquez</a> pour visiter le site !</p>
+            <div class="propriete-notation">
+              <ul class="propriete">
+                <li>Bistronomique</li>
+                <li>Sainte Foy La Grande</li>
+                <li>Vegetarien</li>
+              </ul>
+              <div class="notation">
+                <a class="star" href="#5" title="Donner 5 étoiles">☆</a>
+                <a class="star" href="#4" title="Donner 4 étoiles">☆</a>
+                <a class="star" href="#3" title="Donner 3 étoiles">☆</a>
+                <a class="star" href="#2" title="Donner 2 étoiles">☆</a>
+                <a class="star" href="#1" title="Donner 1 étoile">☆</a>
+              </div> 
+              <div class="buton">
+                <button>Envoyer</button>
+                <p id="note" > /5</p>
+              </div> 
+            </div>
+          </div>
 
-      <section class="articles"> </section>
-    </main>
+        </article>
+      </section>
+      </main>
     <footer> </footer>
   </body>
 </html>
+
+
+
+
+  
