@@ -13,20 +13,40 @@
 
 .filtres {
   background-color: var(--secondary-color);
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
   padding: 2rem;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
   font-family: var(--paragraph-font);
-  font-size: small;
+  font-size: large;
   border-radius: var(--main-border-radius);
-  width: 13%;
+  width: 20%;
   position: fixed;
 
   h3 {
     margin-bottom: 1rem;
     margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .filtres {
+    font-size: smaller;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 10rem;
+    padding: 0;
+    h3 {
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .filtre {
+      overflow: scroll;
+    }
+    .notation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
