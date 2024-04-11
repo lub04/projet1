@@ -17,11 +17,25 @@
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
   }
+  button:hover{
+    background-color: #6b8676 ;
+    cursor: pointer;
+  }
 
 }
 .articles{
   h2{
     font-family: var(--title-font);
+    font-size: xxx-large;
+  }
+  a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+  }
+  a:hover{
+    text-decoration: underline;
+    color:#7e7a19;
   }
   font-family: var(--paragraph-font);
   width: 75%;
@@ -37,12 +51,13 @@
     padding: 2rem;
     width: 90%;
     gap: 2rem;
+    align-items: center;
     .img{
-      max-width: 25%;
+      max-height: 25rem;
+      max-width: 25rem;
       border-radius: var(--main-border-radius);
     }
     .description{
-
       display: flex;
       flex-direction: column;
       padding: 1rem;
@@ -51,7 +66,9 @@
 
       }
       .text-description{
-
+        width: 90%;
+        height: 10rem;
+        overflow: scroll;
       }
       .lien-site{
 
@@ -61,7 +78,7 @@
         flex-direction: column;
         gap: 1rem;
         .buton{
-          background-color: bisque;
+          
           display: flex;
           flex-direction: column;
           gap: 1rem;
@@ -78,9 +95,11 @@
           }
         }
         .propriete{
+          background-color: #EDE52B;
           display: flex;
           justify-content: center;
-          gap: 3rem;
+          gap: 1.5rem;
+          flex-wrap: wrap;
         }
         .notation{
           display: flex;
@@ -120,7 +139,14 @@
       align-items: center;
       
       .img{
-        max-width: 60%;
+        max-width: 75%;
+      }
+      .description{
+        .propriete-notation{
+          .propriete{
+            align-items: center;
+          }
+        }
       }
     }
   }
