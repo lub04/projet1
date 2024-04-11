@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #ede52b;
+  --secondary-color: #c4c3be;
+  --third-color: #aad2ba;
+  --main-border-radius: 20px;
+  --title-font: "Lobster", sans-serif;
+  --paragraph-font: "Rhodium Libre", serif;
+  --text-spacing: 1rem;
+}
