@@ -6,21 +6,25 @@
   --secondary-color: #C4C3BE;
   --third-color: #AAD2BA;
   --main-border-radius : 20px;
-  --main-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.68);
   --title-font: "Lobster", sans-serif;
   --paragraph-font: "Rhodium Libre", serif;
-
+  --text-spacing: 1rem;
 }
 .articles{
   background-color: aqua;
+  width: 75%;
   .article{
+    box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 5px 5px 23px 5px rgba(0,0,0,0.68);
+    border-radius: var(--main-border-radius); 
     background-color: var(--secondary-color);
     display: flex;
     padding: 2rem;
-    width: 70%;
+    width: 90%;
     gap: 2rem;
     .img{
       max-width: 25%;
+      border-radius: var(--main-border-radius);
     }
     .description{
       background-color: brown;
