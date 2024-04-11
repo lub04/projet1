@@ -16,12 +16,14 @@
     background-color: var(--third-color);
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
-    
-
   }
+
 }
 .articles{
-  background-color: aqua;
+  h2{
+    font-family: var(--title-font);
+  }
+  font-family: var(--paragraph-font);
   width: 75%;
   margin-left: auto;
   
@@ -40,19 +42,19 @@
       border-radius: var(--main-border-radius);
     }
     .description{
-      background-color: brown;
+
       display: flex;
       flex-direction: column;
       padding: 1rem;
       gap: 1rem;
       .nom-restaurant{
-        background-color: blueviolet;
+
       }
       .text-description{
-        background-color: aquamarine;
+
       }
       .lien-site{
-        background-color: #EDE52B;
+
       }
       .propriete-notation{
         display: flex;
@@ -76,13 +78,11 @@
           }
         }
         .propriete{
-          background-color: aliceblue;
           display: flex;
           justify-content: center;
           gap: 3rem;
         }
         .notation{
-          background-color: cadetblue;
           display: flex;
           justify-content: center;
           direction: rtl;
@@ -111,6 +111,17 @@
 }
 }
 
-@media screen and(max-width: 992px) {
-  
+@media screen and (max-width: 992px) {
+  .articles{
+    margin: auto;
+    width: 100%;
+    .article{
+      flex-direction: column;
+      align-items: center;
+      
+      .img{
+        max-width: 60%;
+      }
+    }
+  }
 }
