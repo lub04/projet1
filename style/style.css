@@ -13,10 +13,13 @@
 
 header {
   background-image: url(../assets/images/legumes-mis-gauche-ardoise-noire_1220-685.jpeg);
-
-  height: 20rem;
-  background-color: rgb(105, 160, 95);
+  background-size: 100%;
   opacity: 0.9;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
   .titre-logo {
     display: flex;
     justify-content: center;
@@ -25,21 +28,22 @@ header {
       width: 5rem;
       height: 5rem;
     }
-  }
-
-  h1 {
-    color: var(--main-color);
-    font-family: var(--title-font);
-    font-size: xxx-large;
-    width: 15rem;
+    h1 {
+      color: var(--main-color);
+      font-family: var(--title-font);
+      font-size: 4rem;
+      width: 17rem;
+    }
   }
   h2 {
     color: var(--main-color);
     font-family: var(--title-font);
     display: flex;
     justify-content: center;
+    font-size: 2rem;
   }
 }
+
 footer {
   background-image: url(../assets/images/pieddepage.webp);
   max-width: 100%;
