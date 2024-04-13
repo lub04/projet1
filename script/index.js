@@ -7,31 +7,34 @@ let note = 0
 let totalNote = []
 const boutonNote = document.getElementById("note-button")
 let noteFinale = document.getElementById("note")
+let count = 0;
+const compteur = document.getElementById("compteur")
+
+const moyenne = () =>{
+  totalNote.push(note)
+}
+const nbAvis = () => {
+  count++
+  compteur.innerHTML = `${count} avis`
+}
 
   etoile0.addEventListener("click", () => {
     note = 1
-    console.log(note)
   })
   etoile1.addEventListener("click", () => {
     note = 2
-    console.log(note)
   })
   etoile2.addEventListener("click", () => {
     note = 3
-    console.log(note)
   })
   etoile3.addEventListener("click", () => {
     note = 4
-    console.log(note)
   })
   etoile4.addEventListener("click", () => {
     note = 5
-    console.log(note)
   })
-  const moyenne = () =>{
-    totalNote.push(note)
-    console.log(totalNote)
-  }
+
+// calcul de la note moyenne du restaurant
   boutonNote.addEventListener("click", (some, notation) => {
     if (note !==0){
       moyenne()
@@ -40,7 +43,6 @@ let noteFinale = document.getElementById("note")
       console.log(notation)
       noteFinale.innerHTML=`${notation.toFixed(1)}/5`
       note = 0
+      nbAvis() 
     }
   })
- 
-console.log(noteFinale)
