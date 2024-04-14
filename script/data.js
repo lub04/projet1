@@ -41,7 +41,7 @@ const restaurants =[
     propriete3: ,
   }
   { 
-    image: "assets/images/table-dEugène.webp",
+    image: "assets/images/table-dEugene.webp",
     nomResto: "La table d'eugene",
     description: `Le Chef Pierre Cadet et son équipe vous accueillent pour un moment unique dans un cadre élégant et convivial. Dans notre restaurant semi gastronomique, la charmante terrasse se posera en sérieuse alternative durant la belle saison, car c’est d’une cuisine ensoleillée dont il s’agit.
     CUISINE FRANÇAISE – À La Table d’Eugène, vous découvrirez une cuisine semi-gastronomique et traditionnelle, avec une carte variée et gourmande. Les produits sont frais du marché et les desserts fait maison.`,
