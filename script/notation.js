@@ -18,6 +18,8 @@ const systemeNotationArticle = (article) => {
   const nbAvis = () => {
     count++
     compteur.innerHTML = `${count} avis`
+    //stockage du nombre d'avis dans le local storage
+    localStorage.setItem('compteur_avis', count);
   }
   //Fonction : calcul de la note moyenne du restaurant sans les décimaux (toFixed)
   const calculNote = () => {
@@ -26,7 +28,32 @@ const systemeNotationArticle = (article) => {
     notation = some / totalNote.length
     noteFinale.innerHTML=`${notation.toFixed(0)}/5`
     note = 0
+    //stockage des notes attribuées dans le local storage
+    localStorage.setItem('note_moyenne', notation);
   }
+  // A faire au chargement de la page
+  window.onload = () => {
+    // récupération des notes attribuées
+    const noteMoyenne = localStorage.getItem('note_moyenne');
+    //Si il y a des éléments dans le tableau note attribuées 
+    if (noteMoyenne) {
+      //transforme les donées en nombre
+      const noteMoyenneNombre = parseFloat(noteMoyenne);
+      //affiche la note moyenne définie dans le local storage
+      noteFinale.innerHTML = `${noteMoyenneNombre.toFixed(0)}/5`;
+    }
+    // récupération du nombre d'avis
+    const compteurAvis = localStorage.getItem('compteur_avis');
+    //Si il y a des éléments dans le tableau nombre d'avis 
+    if (compteurAvis) {
+      //transforme les donées en nombre
+      const compteurAvisNombre = parseInt(compteurAvis)
+      //affiche le nombre d'avis défini dans le local storage
+      compteur.innerHTML = `${compteurAvisNombre} avis`
+      //ajoute la valeur à la variable count pour ne pas réinitialiser la note après une nouvelle notation
+      count = compteurAvisNombre
+    }
+  };
   // Ce qu'il se passe quand on clique sur le bouton note
   boutonNote.addEventListener("click", () => {
     if (note !==0){
@@ -42,4 +69,6 @@ const articles = document.querySelectorAll(".article");
 articles.forEach(article =>{
   systemeNotationArticle(article)
 })
+
+
   
