@@ -19,6 +19,7 @@
     background-color: var(--third-color);
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+    font-family: var(--paragraph-font);
   }
   button:hover{
     background-color: #6b8676 ;
