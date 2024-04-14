@@ -9,7 +9,10 @@
   --title-font: "Lobster", sans-serif;
   --paragraph-font: "Rhodium Libre", serif;
   --text-spacing: 1rem;
-  button{
+  body{
+    background-color: var(--third-color);
+  }
+    button{
     width: 6rem;
     border-radius: var(--main-border-radius);
     height: 1.5rem;
@@ -137,7 +140,7 @@ main{
         gap: 1rem;
         align-items: center;
         justify-content: center;
-        #note{
+        .note{
           display: flex;
           justify-content: center;
           align-items: center;
@@ -210,13 +213,21 @@ main{
 }
 
 @media screen and (min-width: 1600px) {
-  .articles{
-    .article{
-      .description{
-        .text-description{
-          height: 3.5rem;
+  main{  
+    .articles{
+      .article{
+        .description{
+          .text-description{
+            height: 3.5rem;
+          }
         }
       }
+    }
+      .filtres{
+        height: 46rem;
+        .filtre{
+          max-height: 12rem;
+        }
     }
   }
 }
