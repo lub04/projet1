@@ -47,6 +47,7 @@ header {
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+  margin-bottom: 3rem;
   .titre-logo {
     display: flex;
     justify-content: center;
@@ -72,7 +73,7 @@ header {
 }
 main{
   display: flex;
-  height: 100rem;
+  /* height: 100rem; */
   .filtres {
     background-color: var(--secondary-color);
     padding: 2rem;
@@ -186,6 +187,8 @@ main{
 
     }
   }
+}
+}
 footer {
   background-image: url(../assets/images/pieddepage.webp);
   background-size: 100%;
@@ -196,7 +199,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20rem;
+  margin-top: 3rem;
   padding: 0 5rem;
   .newsletter {
     border: 2px var(--main-color) solid;
@@ -235,7 +238,7 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
-   header {
+  header {
     height: 11rem;
     .titre-logo {
       flex-direction: column-reverse;
@@ -246,7 +249,7 @@ footer {
       display: none;
     }
   }
-   main{
+  main{
 
     flex-direction: column; 
     .filtres {
