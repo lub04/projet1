@@ -1,18 +1,18 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --main-color: #EDE52B;
-  --secondary-color: #C4C3BE;
-  --third-color: #AAD2BA;
-  --main-border-radius : 20px;
+  --main-color: #ede52b;
+  --secondary-color: #c4c3be;
+  --third-color: #aad2ba;
+  --main-border-radius: 20px;
   --title-font: "Lobster", sans-serif;
   --paragraph-font: "Rhodium Libre", serif;
   --text-spacing: 1rem;
-  body{
+  body {
     background-color: rgba(170, 210, 186, 0.3);
   }
-    button{
+  button {
     width: 6rem;
     border-radius: var(--main-border-radius);
     height: 1.5rem;
@@ -21,13 +21,13 @@
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     font-family: var(--paragraph-font);
   }
-  button:hover{
-    background-color: #6b8676 ;
+  button:hover {
+    background-color: #6b8676;
     cursor: pointer;
   }
   h3 {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 }
 *::-webkit-scrollbar {
@@ -71,7 +71,7 @@ header {
     font-size: 2rem;
   }
 }
-main{
+main {
   display: flex;
   /* height: 100rem; */
   .filtres {
@@ -87,33 +87,33 @@ main{
     position: sticky;
     top: 0;
     left: 3rem;
-    .filtre{
+    .filtre {
       max-height: 8.5rem;
       overflow: scroll;
     }
   }
   /* Lubin code */
-  .articles{
-    h2{
+  .articles {
+    h2 {
       font-family: var(--title-font);
       font-size: 2.2rem;
     }
-    a{
+    a {
       text-decoration: none;
       color: var(--main-color);
       font-weight: 600;
     }
-    a:hover{
+    a:hover {
       text-decoration: underline;
-      color:#7e7a19;
+      color: #7e7a19;
     }
     font-family: var(--paragraph-font);
     width: 75%;
     margin-left: auto;
-    .article{
+    .article {
       -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
-      border-radius: var(--main-border-radius); 
+      border-radius: var(--main-border-radius);
       background-color: var(--secondary-color);
       margin: auto;
       display: flex;
@@ -121,60 +121,60 @@ main{
       width: 90%;
       gap: 2rem;
       align-items: center;
-      .img{
+      .img {
         max-height: 25rem;
         max-width: 17rem;
         border-radius: var(--main-border-radius);
       }
-      .description{
+      .description {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1rem;
         gap: 1rem;
-        .text-description{
+        .text-description {
           width: 90%;
           height: 7rem;
           overflow: scroll;
         }
-        .propriete-notation{
+        .propriete-notation {
           display: flex;
           flex-direction: column;
           gap: 1rem;
-          }
-          .propriete{
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-          }
         }
-        .notation{
+        .propriete {
           display: flex;
           justify-content: center;
-          direction: rtl;
-          .star{
-            color: #aaa;
-            text-decoration: none;
-            font-size: 2rem;
-            transition: color .4s;
-          }
-          .star:hover,
-          .star:focus{
-            color: orange;
-            cursor: pointer;
-          }
-          .star:hover ~ .star,
-          .star:focus ~ .star{
-            color: orange;
+          gap: 1.5rem;
+          flex-wrap: wrap;
         }
       }
-      .buton{
+      .notation {
+        display: flex;
+        justify-content: center;
+        direction: rtl;
+        .star {
+          color: #aaa;
+          text-decoration: none;
+          font-size: 2rem;
+          transition: color 0.4s;
+        }
+        .star:hover,
+        .star:focus {
+          color: orange;
+          cursor: pointer;
+        }
+        .star:hover ~ .star,
+        .star:focus ~ .star {
+          color: orange;
+        }
+      }
+      .buton {
         display: flex;
         gap: 1rem;
         align-items: center;
         justify-content: center;
-        .note{
+        .note {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -183,14 +183,12 @@ main{
           border-radius: 100%;
           border: 2px solid var(--third-color);
         }
-      
-
+      }
     }
   }
 }
-}
 footer {
-  background-image: url(../assets/images/pieddepage.webp);
+  background-image: url(../assets/images/RotateImage.png);
   background-size: 100%;
   max-width: 100%;
   height: 15rem;
@@ -249,9 +247,8 @@ footer {
       display: none;
     }
   }
-  main{
-
-    flex-direction: column; 
+  main {
+    flex-direction: column;
     .filtres {
       font-size: smaller;
       width: 90%;
@@ -269,7 +266,7 @@ footer {
         margin-bottom: 0.5rem;
         margin-top: 0.5rem;
       }
-      .filtre-titre{
+      .filtre-titre {
         max-height: 5rem;
         .filtre {
           max-height: 80%;
@@ -283,19 +280,19 @@ footer {
         align-items: center;
       }
     }
-    .articles{
+    .articles {
       margin: 3rem auto auto auto;
       width: 100%;
-      .article{
+      .article {
         flex-direction: column;
         align-items: center;
-        .img{
+        .img {
           max-width: 75%;
         }
-        .description{
+        .description {
           align-items: center;
-          .propriete-notation{
-            .propriete{
+          .propriete-notation {
+            .propriete {
               align-items: center;
             }
           }
@@ -313,21 +310,21 @@ footer {
 }
 
 @media screen and (min-width: 1600px) {
-  main{  
-    .articles{
-      .article{
-        .description{
-          .text-description{
+  main {
+    .articles {
+      .article {
+        .description {
+          .text-description {
             height: 3.5rem;
           }
         }
       }
     }
-      .filtres{
-        height: 46rem;
-        .filtre{
-          max-height: 12rem;
-        }
+    .filtres {
+      height: 46rem;
+      .filtre {
+        max-height: 12rem;
+      }
     }
   }
 }
