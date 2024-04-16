@@ -10,7 +10,7 @@
   --paragraph-font: "Rhodium Libre", serif;
   --text-spacing: 1rem;
   body{
-    background-color: var(--third-color);
+    background-color: rgba(170, 210, 186, 0.3);
   }
     button{
     width: 6rem;
