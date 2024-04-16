@@ -38,6 +38,38 @@
   border-radius: 20px;
   border: 3px solid lightgray;
 }
+header {
+  background-image: url(../assets/images/legumes-mis-gauche-ardoise-noire_1220-685.jpeg);
+  background-size: 100%;
+  opacity: 0.9;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  .titre-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      width: 5rem;
+      height: 5rem;
+    }
+    h1 {
+      color: var(--main-color);
+      font-family: var(--title-font);
+      font-size: 4rem;
+      width: 17rem;
+    }
+  }
+  h2 {
+    color: var(--main-color);
+    font-family: var(--title-font);
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+}
 main{
   display: flex;
   height: 100rem;
@@ -154,11 +186,68 @@ main{
 
     }
   }
+footer {
+  background-image: url(../assets/images/pieddepage.webp);
+  background-size: 100%;
+  max-width: 100%;
+  height: 15rem;
+  background-color: rgb(105, 160, 95);
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rem;
+  padding: 0 5rem;
+  .newsletter {
+    border: 2px var(--main-color) solid;
+    border-radius: var(--main-border-radius);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
+    box-shadow: 5px 5px 15px 5px rgba(248, 247, 247, 0.334);
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    .texte-mail {
+      width: 100%;
+      height: 1.5rem;
+    }
+    .texte {
+      font-size: 1.5rem;
+      font-family: var(--paragraph-font);
+    }
+  }
+  div {
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 10rem;
+    text-decoration: underline var(--main-color);
+    gap: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    font-family: var(--paragraph-font);
   }
 }
 
 @media screen and (max-width: 992px) {
-  main{
+   header {
+    height: 11rem;
+    .titre-logo {
+      flex-direction: column-reverse;
+
+      align-items: self-start;
+    }
+    h2 {
+      display: none;
+    }
+  }
+   main{
+
     flex-direction: column; 
     .filtres {
       font-size: smaller;
@@ -211,6 +300,13 @@ main{
       }
     }
   }
+  footer {
+    justify-content: center;
+    height: 11rem;
+    div {
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -233,4 +329,3 @@ main{
   }
 }
 /* Fin Lubin code */
-
