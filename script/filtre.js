@@ -12,21 +12,16 @@ const createCard = () => {
   alt="logo du restaurant l'abstrait"
 />
 <div class="description">
-  <h2 class="nom-restaurant">L'abstrait</h2>
-  <p class="text-description">
-    Restaurant bistronomique et cuisine au comptoir sont les deux
-    concepts développés par Dorian Foulquier au 97 rue Victor-Hugo à
-    L’Abstrait. Pour vous accueillir le personnel dynamique montre un
-    haut niveau d'hospitalité dans ce restaurant.
-  </p>
+  <h2 class="nom-restaurant">${restaurants[0].nomResto}</h2>
+  <p class="text-description">${restaurants[0].description}</p>
   <p class="lien-site"
-    ><a href="">Cliquez</a> pour visiter le site !</p
+    ><a href=${restaurants[0].lienWeb}>Cliquez</a> pour visiter le site !</p
   >
   <div class="propriete-notation">
     <ul class="propriete">
-      <li>Bistronomique</li>
-      <li>Sainte Foy La Grande</li>
-      <li>Vegetarien</li>
+      <li>${restaurants[0].propriete1}</li>
+      <li>${restaurants[0].propriete2}</li>
+      <li>${restaurants[0].propriete3}</li>
     </ul>
   </div>
   <div class="notation">
