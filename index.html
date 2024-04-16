@@ -143,8 +143,9 @@
             </div>
           </div>
         </div>
-        <!-- <div class="vegetarien filtre">
-          <h3>Type de plat</h3>
+        <!-- <h3>Type de plat</h3>
+        <div class="vegetarien filtre">
+          
           <div>
             <input type="radio" id="aliment1" name="aliment" value="vegie" />
             <label for="vegie">Végétarien</label>
@@ -195,18 +196,19 @@
                 <li>Sainte Foy La Grande</li>
                 <li>Vegetarien</li>
               </ul>
-              <div class="notation">
-                <a class="star" href="#5" title="Donner 5 étoiles">☆</a>
-                <a class="star" href="#4" title="Donner 4 étoiles">☆</a>
-                <a class="star" href="#3" title="Donner 3 étoiles">☆</a>
-                <a class="star" href="#2" title="Donner 2 étoiles">☆</a>
-                <a class="star" href="#1" title="Donner 1 étoile">☆</a>
-              </div>
-              <div class="buton">
-                <button>Envoyer</button>
-                <p id="note"> /5</p>
-              </div>
             </div>
+            <div class="notation">
+              <a id="star5" class="star star5" href="#5" title="Donner 5 étoiles">☆</a>
+              <a id="star4" class="star star4" href="#4" title="Donner 4 étoiles">☆</a>
+              <a id="star3" class="star star3" href="#3" title="Donner 3 étoiles">☆</a>
+              <a id="star2" class="star star2" href="#2" title="Donner 2 étoiles">☆</a>
+              <a id="star1" class="star star1" href="#1" title="Donner 1 étoile">☆</a>
+            </div> 
+            <div class="buton">
+              <button class="note-button">Noter !</button>
+              <p class="note" > </p>
+              <small class="compteur"></small>
+            </div> 
           </div>
         </article>
       </section>
@@ -225,5 +227,7 @@
         <p class="texte-footer3">Merci de votre visite</p>
       </div>
     </footer>
+    <script src="script/notation.js"></script>
+    <script src="script/index.js"></script>
   </body>
 </html>
