@@ -12,7 +12,7 @@
   body {
     background-color: rgba(170, 210, 186, 0.3);
   }
-  button {
+  button:not(.star) {
     width: 6rem;
     border-radius: var(--main-border-radius);
     height: 1.5rem;
@@ -21,7 +21,7 @@
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     font-family: var(--paragraph-font);
   }
-  button:hover {
+  button:not(.star):hover {
     background-color: #6b8676;
     cursor: pointer;
   }
@@ -115,7 +115,7 @@ main {
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
       border-radius: var(--main-border-radius);
       background-color: var(--secondary-color);
-      margin: auto;
+      margin: auto auto 3rem auto;
       display: flex;
       padding: 0.5rem 2rem;
       width: 90%;
@@ -154,6 +154,8 @@ main {
         justify-content: center;
         direction: rtl;
         .star {
+          border: none;
+          background-color: var(--secondary-color);
           color: #aaa;
           text-decoration: none;
           font-size: 2rem;

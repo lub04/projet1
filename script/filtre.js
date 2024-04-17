@@ -4,6 +4,7 @@ const createCard = () => {
   for (let i = 0; i < restaurants.length; i++) {
     const article = document.createElement("article");
     article.classList.add("article");
+    article.id = restaurants[i].idResto
     console.log(article);
 
     const cardArticle = `
@@ -26,47 +27,44 @@ const createCard = () => {
     </ul>
   </div>
   <div class="notation">
-    <a
-      id="star5"
+    <button
       class="star star5"
-      href="#5"
       title="Donner 5 étoiles"
-      >☆</a
+      onclick="manageStars(5, ${restaurants[i].idResto})"
+      >☆</button
     >
-    <a
-      id="star4"
+    <button
       class="star star4"
-      href="#4"
       title="Donner 4 étoiles"
-      >☆</a
+      onclick="manageStars(4, ${restaurants[i].idResto})"
+      >☆</button
     >
-    <a
-      id="star3"
+    <button
       class="star star3"
-      href="#3"
       title="Donner 3 étoiles"
-      >☆</a
+      onclick="manageStars(3, ${restaurants[i].idResto})"
+      >☆</button
     >
-    <a
-      id="star2"
+    <button
       class="star star2"
-      href="#2"
       title="Donner 2 étoiles"
-      >☆</a
+      onclick="manageStars(2, ${restaurants[i].idResto})"
+      >☆</button
     >
-    <a id="star1" class="star star1" href="#1" title="Donner 1 étoile"
-      >☆</a
+    <button class="star star1" title="Donner 1 étoile" onclick="manageStars(1, ${restaurants[i].idResto})"
+      >☆</button
     >
   </div>
-  <div class="buton">
-    <button class="note-button">Noter !</button>
-    <p class="note"> </p>
-    <small class="compteur"></small>
+  <div class="buton" id="compteur_id_du_resto">
+    <button id="note_btn_${restaurants[i].idResto}" class="note-button" onclick="manageCompteur(${restaurants[i].idResto})">Noter !</button>
+    <p id="note_article_${restaurants[i].idResto}"class="note" > </p>
+    <small id="nb_avis_article_${restaurants[i].idResto}" class="compteur"></small>
   </div>
 </div>`;
-    console.log(cardArticle);
+    
     article.innerHTML = cardArticle;
     section.appendChild(article);
   }
 };
 createCard();
+
