@@ -18,16 +18,16 @@
  
   //Fonction : calcul de la note moyenne du restaurant sans les décimaux (toFixed)
 
-  // // A faire au chargement de la page
+  // A faire au chargement de la page
   // window.onload = () => {
   //   // récupération des notes attribuées
-  //   const noteMoyenne = localStorage.getItem('note_moyenne');
+  //   const recupMemo = localStorage.getItem('memo_current_resto');
   //   //Si il y a des éléments dans le tableau note attribuées 
-  //   if (noteMoyenne) {
+  //   if (recupMemo) {
   //     //transforme les donées en nombre
-  //     const noteMoyenneNombre = parseFloat(noteMoyenne);
+  //     const recupMemoNombre = parseFloat(recupMemo);
   //     //affiche la note moyenne définie dans le local storage
-  //     noteFinale.innerHTML = `${noteMoyenneNombre.toFixed(0)}/5`;
+  //     noteFinale.innerHTML = `${notation.toFixed(0)}/5`;
   //   }
   //   // récupération du nombre d'avis
   //   const compteurAvis = localStorage.getItem('compteur_avis');
@@ -41,23 +41,10 @@
   //     count = compteurAvisNombre
   //   }
   // };
-  // Ce qu'il se passe quand on clique sur le bouton note
  
-//  }
-// // Attribution d'un système de notation spécifique à chaque article 
-// const articles = document.querySelectorAll(".article");
-// console.log(articles)
-// articles.forEach(article =>{
-//   systemeNotationArticle(article)
-// })
+ 
 
-  
-  let note = 0
-  let count = 0;
-  // const compteur = document.querySelectorAll(".compteur")
-  // let noteFinale = document.querySelectorAll(".note")
-  // console.log(compteur)
-  // console.log(noteFinale)
+
 const memo = [];
 const manageStars = (idStar, idResto) => {
   const existingResto = memo.findIndex(item => item.idResto === idResto);
@@ -66,11 +53,9 @@ const manageStars = (idStar, idResto) => {
   } else {
     memo.push({ idStar, idResto, compteur: 0, note: [],notation: 0 });
   }
-  // console.log(memo);
-  // console.log(idStar)
-  // console.log(note)
+
 }
-// const systemeNotation = () => {
+
 
 
 const manageCompteur = (idResto) => {
@@ -83,25 +68,15 @@ const manageCompteur = (idResto) => {
     memo[existingResto].notation = notation
     const noteFinale = document.getElementById(`note_article_${memo[existingResto].idResto}`)
     const compteur = document.getElementById(`nb_avis_article_${memo[existingResto].idResto}`)
-    noteFinale.innerHTML=`${notation.toFixed(0)}/5`
+    noteFinale.innerHTML=`${notation.toFixed(1)}/5`
     compteur.innerHTML = `${memo[existingResto].compteur} avis`
     memo[existingResto].idStar = 0
-    console.log(notation)
-    console.log(memo[existingResto])//.compteur)
-    // console.log(memo[existingResto].note)
-    // console.log(memo[existingResto].idStar)
-    // note = [0]
-// noteFinale.innerHTML=`${notation.toFixed(0)}/5`
-  // Vérifier si dans le mémo, il y a un objet avec l'i du resto
-  // si oui, increment le compteur puis calcul la note et mets la à jour
-      // puis ajouter la note dans le HTML
-      // puis ajouter le nb de vote dans le HTML
-  // si non, alert ...
+
 }else{
   alert("Vous devez choisir une note de 1 a 5 étoiles")
 }
 }
-let totalNote = []
+
 
   
   
@@ -109,7 +84,7 @@ let totalNote = []
     count++
     compteur.innerHTML = `${count} avis`
     //stockage du nombre d'avis dans le local storage
-    // localStorage.setItem('compteur_avis', count);
+    // 
     
   }
   const calculNote = () => {
