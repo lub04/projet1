@@ -2,9 +2,7 @@ let city = "";
 let foodtype = "";
 
 const section = document.querySelector(".articles");
-// Ajout d'une variable pour mémoriser l'état du filtre, initial il est null ou ""
 
-/** Fonction permettant le création d'une carte */
 const createCard = (restaurant) => {
   const article = document.createElement("article");
   article.classList.add("article");
@@ -73,13 +71,13 @@ const createCard = (restaurant) => {
 };
 
 const render = () => {
-  console.log("render");
-  console.log(city);
-  console.log(foodtype);
   section.innerHTML = "";
   for (let i = 0; i < restaurants.length; i++) {
     if (restaurants[i].propriete2 === city || city === "") {
-      if (restaurants[i].propriete1 === foodtype || foodtype === "") {
+      if (
+        foodtype.length === 0 ||
+        foodtype.includes(restaurants[i].propriete1)
+      ) {
         const article = createCard(restaurants[i]);
         section.appendChild(article);
       }
@@ -90,27 +88,21 @@ render();
 
 const cityInput = document.querySelectorAll(".city input");
 const foodInput = document.querySelectorAll(".foodtype input");
-console.log(foodInput);
 for (let i = 0; i < cityInput.length; i++) {
   cityInput[i].addEventListener("click", (event) => {
-    console.log("Click:", event.target.value);
     city = event.target.value;
     render();
   });
 }
 for (let i = 0; i < foodInput.length; i++) {
   foodInput[i].addEventListener("click", (event) => {
-    console.log("Click:", event.target.value);
-    foodtype = event.target.value;
+    const selectedfoodtypes = [];
+    for (let j = 0; j < foodInput.length; j++) {
+      if (foodInput[j].checked) {
+        selectedfoodtypes.push(foodInput[j].value);
+      }
+    }
+    foodtype = selectedfoodtypes;
     render();
   });
 }
-
-// condition, si le resto.propriete2 est égale à city alors fait
-// ou city est égale à ""
-
-// Step 1, récupère ton element de filtre
-// step 2, ajoute un listeners
-// step 3, logique métiers
-// - mettre à jour la variable globale de filtre
-// - relancer la boucle via une fonction en prenant en compte, condition la variable globale de filtre
