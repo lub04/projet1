@@ -11,7 +11,7 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
-    image: "assets/images/kytorama",
+    image: "assets/images/kyotorama.jpeg.jpg",
     alt: `logo du restaurant Kyotorama`,
     nomResto: "Kyotorama",
     description: `La cuisine japonaise créée par un chef grandiose est merveilleuse à cet endroit. Les gourmets disent qu'un parfait est cuit à la perfection ici.
@@ -57,7 +57,7 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
-    image: "assets/images/les-fresques.jpeg",
+    image: "assets/images/les-fresques.jpg",
     alt: `logo du restaurant Les Fresques`,
     nomResto: "Les Fresques",
     description: `Le restaurant gastronomique, les Fresques, une étoile au Guide Michelin vous fera découvrir une cuisine élaborée et goûteuse renouvelée au gré des saisons.
