@@ -1,27 +1,28 @@
 const section = document.querySelector(".articles");
 
 const createCard = () => {
-  const article = document.createElement("article");
-  article.classList.add("article");
-  console.log(article);
+  for (let i = 0; i < restaurants.length; i++) {
+    const article = document.createElement("article");
+    article.classList.add("article");
+    console.log(article);
 
-  const cardArticle = `
+    const cardArticle = `
 <img
   class="img"
-  src="assets/images/l'abstrait.jpg"
+  src=${restaurants[i].image}
   alt="logo du restaurant l'abstrait"
 />
 <div class="description">
-  <h2 class="nom-restaurant">${restaurants[0].nomResto}</h2>
-  <p class="text-description">${restaurants[0].description}</p>
+  <h2 class="nom-restaurant">${restaurants[i].nomResto}</h2>
+  <p class="text-description">${restaurants[i].description}</p>
   <p class="lien-site"
-    ><a href=${restaurants[0].lienWeb}>Cliquez</a> pour visiter le site !</p
+    ><a href=${restaurants[i].lienWeb}>Cliquez</a> pour visiter le site !</p
   >
   <div class="propriete-notation">
     <ul class="propriete">
-      <li>${restaurants[0].propriete1}</li>
-      <li>${restaurants[0].propriete2}</li>
-      <li>${restaurants[0].propriete3}</li>
+      <li>${restaurants[i].propriete1}</li>
+      <li>${restaurants[i].propriete2}</li>
+      <li>${restaurants[i].propriete3}</li>
     </ul>
   </div>
   <div class="notation">
@@ -63,9 +64,9 @@ const createCard = () => {
     <small class="compteur"></small>
   </div>
 </div>`;
-  console.log(cardArticle);
-  article.innerHTML = cardArticle;
-  section.appendChild(article);
+    console.log(cardArticle);
+    article.innerHTML = cardArticle;
+    section.appendChild(article);
+  }
 };
-
 createCard();
