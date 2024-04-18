@@ -13,7 +13,7 @@
     background: rgb(170, 210, 186);
     background: radial-gradient(
       circle,
-      rgba(170, 210, 186, 0.8015581232492998) 50%,
+      rgba(170, 210, 186, 0.4) 50%,
       rgba(255, 255, 255, 1) 100%
     );
   }
@@ -113,11 +113,13 @@ main {
 
     }
   }
-  /* Lubin code */
   .articles {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    font-family: var(--paragraph-font);
+    width: 75%;
+    margin-left: auto;
     h2 {
       font-family: var(--title-font);
       font-size: 2.2rem;
@@ -131,9 +133,7 @@ main {
       text-decoration: underline;
       color: #7e7a19;
     }
-    font-family: var(--paragraph-font);
-    width: 75%;
-    margin-left: auto;
+
     .article {
       -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
@@ -342,10 +342,13 @@ footer {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 2350px) {
   main {
     .articles {
       .article {
+        width: 120rem;
+        margin-left: -10rem;
+        margin-right: auto;
         .description {
           .text-description {
             height: 3.5rem;
@@ -355,6 +358,7 @@ footer {
     }
     .filtres {
       height: 46rem;
+      max-width: 22rem;
       .filtre {
         max-height: 12rem;
       }
