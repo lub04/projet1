@@ -1,14 +1,16 @@
 let memo = [];
-
+const display = (resto) => {
+  const noteFinale = document.getElementById(`note_article_${resto.idResto}`);
+  const compteur = document.getElementById(`nb_avis_article_${resto.idResto}`);
+  noteFinale.innerHTML = `${resto.notation.toFixed(1)}/5`;
+  compteur.innerHTML = `${resto.compteur} avis`;
+}
 window.onload = () => {
   const storedMemo = JSON.parse(localStorage.getItem('memo'));
   if (storedMemo) {
     memo = storedMemo;
     memo.forEach(resto => {
-      const noteFinale = document.getElementById(`note_article_${resto.idResto}`);
-      const compteur = document.getElementById(`nb_avis_article_${resto.idResto}`);
-      noteFinale.innerHTML = `${resto.notation.toFixed(1)}/5`;
-      compteur.innerHTML = `${resto.compteur} avis`;
+      display(resto)
     });
   }
 }
@@ -32,10 +34,7 @@ const manageCompteur = (idResto) => {
       let some = memo[existingResto].note.reduce((acc, currentValue) => acc + currentValue)
       let notation = some / memo[existingResto].note.length
       memo[existingResto].notation = notation
-      const noteFinale = document.getElementById(`note_article_${memo[existingResto].idResto}`)
-      const compteur = document.getElementById(`nb_avis_article_${memo[existingResto].idResto}`)
-      noteFinale.innerHTML=`${notation.toFixed(1)}/5`
-      compteur.innerHTML = `${memo[existingResto].compteur} avis`
+      display(memo[existingResto])
       memo[existingResto].idStar = 0
       localStorage.setItem('memo', JSON.stringify(memo));
     }else{
