@@ -21,6 +21,17 @@
 
     <!-- style -->
     <link rel="stylesheet" href="style/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "57QmWcR_zkVYHGTI3",
+        });
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -187,9 +198,9 @@
               L’Abstrait. Pour vous accueillir le personnel dynamique montre un
               haut niveau d'hospitalité dans ce restaurant.
             </p>
-            <p class="lien-site"
-              ><a href="">Cliquez</a> pour visiter le site !</p
-            >
+            <p class="lien-site">
+              <a href="">Cliquez</a> pour visiter le site !
+            </p>
             <div class="propriete-notation">
               <ul class="propriete">
                 <li>Bistronomique</li>
@@ -198,26 +209,57 @@
               </ul>
             </div>
             <div class="notation">
-              <a id="star5" class="star star5" href="#5" title="Donner 5 étoiles">☆</a>
-              <a id="star4" class="star star4" href="#4" title="Donner 4 étoiles">☆</a>
-              <a id="star3" class="star star3" href="#3" title="Donner 3 étoiles">☆</a>
-              <a id="star2" class="star star2" href="#2" title="Donner 2 étoiles">☆</a>
-              <a id="star1" class="star star1" href="#1" title="Donner 1 étoile">☆</a>
-            </div> 
+              <a
+                id="star5"
+                class="star star5"
+                href="#5"
+                title="Donner 5 étoiles"
+                >☆</a
+              >
+              <a
+                id="star4"
+                class="star star4"
+                href="#4"
+                title="Donner 4 étoiles"
+                >☆</a
+              >
+              <a
+                id="star3"
+                class="star star3"
+                href="#3"
+                title="Donner 3 étoiles"
+                >☆</a
+              >
+              <a
+                id="star2"
+                class="star star2"
+                href="#2"
+                title="Donner 2 étoiles"
+                >☆</a
+              >
+              <a id="star1" class="star star1" href="#1" title="Donner 1 étoile"
+                >☆</a
+              >
+            </div>
             <div class="buton">
               <button class="note-button">Noter !</button>
-              <p class="note" > </p>
+              <p class="note"></p>
               <small class="compteur"></small>
-            </div> 
+            </div>
           </div>
         </article>
       </section>
     </main>
     <footer>
-      <form action="" method="" class="newsletter">
+      <form id="email-form" class="newsletter">
         <label class="texte" for="mail">Newsletter :</label>
-        <input class="texte-mail" type="email" id="mail" />
-        <button type="button">Envoyer!</button>
+        <input
+          class="texte-mail"
+          type="email"
+          name="user-mail"
+          id="user-mail"
+        />
+        <button type="submit">Envoyer!</button>
       </form>
       <div>
         <p class="texte-footer">
@@ -227,6 +269,7 @@
         <p class="texte-footer3">Merci de votre visite</p>
       </div>
     </footer>
+    <script src="script/newsletter.js"></script>
     <script src="script/notation.js"></script>
     <script src="script/index.js"></script>
   </body>
