@@ -80,12 +80,17 @@ main {
   display: flex;
   /* height: 100rem; */
   .filtres {
-    background: rgb(142, 158, 171);
+    /* background: rgb(142, 158, 171);
     background: radial-gradient(
       circle,
       rgba(142, 158, 171, 1) 0%,
       rgba(238, 242, 243, 1) 100%
-    );
+    ); */
+    color: var(--third-color);
+    background-image: url(../assets/images/mexican-food.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
     padding: 2rem;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
@@ -97,9 +102,15 @@ main {
     position: sticky;
     top: 0;
     left: 3rem;
+    h3{
+      color: var(--main-color);
+      font-family: var(--title-font);
+      font-size: x-large;
+    }
     .filtre {
-      max-height: 8.5rem;
+      height: 15rem;
       overflow: scroll;
+
     }
   }
   /* Lubin code */
@@ -291,6 +302,8 @@ footer {
         .filtre {
           max-height: 80%;
           overflow: scroll;
+          color: black;
+          font-weight: bolder;
         }
       }
       .notation {
@@ -348,4 +361,4 @@ footer {
     }
   }
 }
-/* Fin Lubin code */
+
