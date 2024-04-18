@@ -77,5 +77,3 @@ const manageCompteur = (idResto) => {
   //   // //stockage des notes attribuées dans le local storage
   //   // localStorage.setItem('note_moyenne', notation);
   // }
-
- 
