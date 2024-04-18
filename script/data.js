@@ -1,5 +1,6 @@
 const restaurants = [
   {
+    idResto: "1",
     image: "assets/images/l'abstrait.jpg",
     alt: `logo du restaurant L'abstrait'`,
     nomResto: "L'abstrait",
@@ -11,7 +12,8 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
-    image: "assets/images/kytorama",
+    idResto: "2",
+    image: "assets/images/kyotorama.jpeg.jpg",
     alt: `logo du restaurant Kyotorama`,
     nomResto: "Kyotorama",
     description: `La cuisine japonaise créée par un chef grandiose est merveilleuse à cet endroit. Les gourmets disent qu'un parfait est cuit à la perfection ici.
@@ -23,6 +25,7 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
+    idResto: "3",
     image: "assets/images/le-tabagnon.png",
     alt: `logo du restaurant Le Tabagnon`,
     nomResto: "Le Tabagnon",
@@ -33,6 +36,7 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
+    idResto: "4",
     image: "assets/images/hang-art.png",
     alt: `logo du restaurant Le Hang'Art`,
     nomResto: "Le Hang'Art",
@@ -46,6 +50,7 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
+    idResto: "5",
     image: "assets/images/table-dEugene.webp",
     alt: `logo du restaurant La table d'eugene`,
     nomResto: "La table d'eugene",
@@ -57,7 +62,8 @@ const restaurants = [
     propriete3: "Vegetarien",
   },
   {
-    image: "assets/images/les-fresques.jpeg",
+    idResto: "6",
+    image: "assets/images/les-fresques.jpg",
     alt: `logo du restaurant Les Fresques`,
     nomResto: "Les Fresques",
     description: `Le restaurant gastronomique, les Fresques, une étoile au Guide Michelin vous fera découvrir une cuisine élaborée et goûteuse renouvelée au gré des saisons.
