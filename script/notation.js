@@ -1,4 +1,17 @@
-const memo = [];
+let memo = [];
+
+window.onload = () => {
+  const storedMemo = JSON.parse(localStorage.getItem('memo'));
+  if (storedMemo) {
+    memo = storedMemo;
+    memo.forEach(resto => {
+      const noteFinale = document.getElementById(`note_article_${resto.idResto}`);
+      const compteur = document.getElementById(`nb_avis_article_${resto.idResto}`);
+      noteFinale.innerHTML = `${resto.notation.toFixed(1)}/5`;
+      compteur.innerHTML = `${resto.compteur} avis`;
+    });
+  }
+}
 
 const manageStars = (idStar, idResto) => {
   const existingResto = memo.findIndex(item => item.idResto === idResto);
@@ -7,6 +20,7 @@ const manageStars = (idStar, idResto) => {
   } else {
     memo.push({ idStar, idResto, compteur: 0, note: [],notation: 0 });
   }
+  localStorage.setItem('memo', JSON.stringify(memo));
 }
 
 const manageCompteur = (idResto) => {
@@ -23,7 +37,7 @@ const manageCompteur = (idResto) => {
       noteFinale.innerHTML=`${notation.toFixed(1)}/5`
       compteur.innerHTML = `${memo[existingResto].compteur} avis`
       memo[existingResto].idStar = 0
-      
+      localStorage.setItem('memo', JSON.stringify(memo));
     }else{
       alert("Vous devez choisir une note de 1 a 5 étoiles")
     }
