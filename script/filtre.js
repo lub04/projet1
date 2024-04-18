@@ -1,3 +1,4 @@
+
 render();
 
 const cityInput = document.querySelectorAll(".city input");
@@ -20,3 +21,4 @@ for (let i = 0; i < foodInput.length; i++) {
     render();
   });
 }
+

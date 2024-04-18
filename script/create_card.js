@@ -56,7 +56,7 @@ const createCard = (restaurant) => {
     >
   </div>
   <div class="buton" id="compteurid_du_resto">
-    <button id="note_btn${restaurant.idResto}" class="note-button" onclick="manageCompteur(${restaurant.idResto})">Noter !</button>
+    <button id="note_btn_${restaurant.idResto}" class="note-button" onclick="manageCompteur(${restaurant.idResto})">Noter !</button>
     <p id="note_article_${restaurant.idResto}"class="note"> </p>
     <small id="nb_avis_article_${restaurant.idResto}" class="compteur"></small>
   </div>
