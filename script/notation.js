@@ -5,7 +5,7 @@ const display = (resto) => {
   noteFinale.innerHTML = `${resto.notation.toFixed(1)}/5`;
   compteur.innerHTML = `${resto.compteur} avis`;
 }
-window.onload = () => {
+const takeStorage = () => {
   const storedMemo = JSON.parse(localStorage.getItem('memo'));
   if (storedMemo) {
     memo = storedMemo;
@@ -13,6 +13,9 @@ window.onload = () => {
       display(resto)
     });
   }
+}
+window.onload = () => {
+  takeStorage()
 }
 
 const manageStars = (idStar, idResto) => {
