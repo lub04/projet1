@@ -51,7 +51,7 @@
                 type="radio"
                 id="city1"
                 name="city"
-                value="Sainte Foy la Grande"
+                value="Sainte foy la Grande"
               />
               <label for="city">Sainte Foy la Grande</label>
             </div>
@@ -64,9 +64,13 @@
                 type="radio"
                 id="city3"
                 name="city"
-                value="Tassin la Demi Lune"
+                value="Tassin-la-Demi-Lune"
               />
               <label for="city">Tassin la Demi Lune</label>
+            </div>
+            <div>
+              <input type="radio" id="city4" name="city" value="" />
+              <label for="city">Toutes les villes</label>
             </div>
           </div>
         </div>
@@ -78,7 +82,7 @@
                 type="checkbox"
                 id="food1"
                 name="restaurant"
-                value="restaurant"
+                value="Cuisine du monde"
               />
               <label for="restaurant">Cuisine du monde</label>
             </div>
@@ -87,7 +91,7 @@
                 type="checkbox"
                 id="food2"
                 name="restaurant"
-                value="restaurant"
+                value="Gastronomique"
               />
               <label for="restaurant">Gastronomique</label>
             </div>
@@ -96,16 +100,16 @@
                 type="checkbox"
                 id="food3"
                 name="restaurant"
-                value="restaurant"
+                value="Semi-gastronomique"
               />
-              <label for="restaurant">Semi-Gastronomique</label>
+              <label for="restaurant">Semi-gastronomique</label>
             </div>
             <div>
               <input
                 type="checkbox"
                 id="food4"
                 name="restaurant"
-                value="restaurant"
+                value="Bistronomique"
               />
               <label for="restaurant">Bistronomique</label>
             </div>
@@ -114,11 +118,11 @@
                 type="checkbox"
                 id="food5"
                 name="restaurant"
-                value="restaurant"
+                value="Traditionnel"
               />
               <label for="restaurant">Traditionnel</label>
             </div>
-            <div>
+            <!-- <div>
               <input
                 type="checkbox"
                 id="food6"
@@ -126,11 +130,11 @@
                 value="restaurant"
               />
               <label for="restaurant">Fast-Food</label>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="filtre-titre">
-          <h3>Note</h3>
+          <!-- <h3>Note</h3>
           <div class="notation filtre">
             <div>
               <input type="radio" id="note1" name="notation" value="notation" />
@@ -152,7 +156,7 @@
               <input type="radio" id="note5" name="notation" value="notation" />
               <label for="notation">5/5</label>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- <h3>Type de plat</h3>
         <div class="vegetarien filtre">
@@ -184,10 +188,10 @@
         </div> -->
       </section>
       <section class="articles">
-        <article class="article">
+        <!-- <article class="article">
           <img
             class="img"
-            src="assets/images/l'abstrait.jpg"
+            data-class='loading' data-src="assets/images/l'abstrait.jpg"
             alt="logo du restaurant l'abstrait"
           />
           <div class="description">
@@ -243,11 +247,11 @@
             </div>
             <div class="buton">
               <button class="note-button">Noter !</button>
-              <p class="note"></p>
+              <p class="note"> </p>
               <small class="compteur"></small>
             </div>
           </div>
-        </article>
+        </article> -->
       </section>
     </main>
     <footer>
@@ -269,8 +273,11 @@
         <p class="texte-footer3">Merci de votre visite</p>
       </div>
     </footer>
+    <script src="script/data.js"></script>
     <script src="script/newsletter.js"></script>
     <script src="script/notation.js"></script>
+    <script src="script/create_card.js"></script>
+    <script src="script/filtre.js"></script>
     <script src="script/index.js"></script>
   </body>
 </html>

@@ -3,16 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   --main-color: #ede52b;
-  --secondary-color: #c4c3be;
+  --secondary-color: #ced4da;
   --third-color: #aad2ba;
   --main-border-radius: 20px;
   --title-font: "Lobster", sans-serif;
   --paragraph-font: "Rhodium Libre", serif;
   --text-spacing: 1rem;
   body {
-    background-color: rgba(170, 210, 186, 0.3);
+    background: rgb(170, 210, 186);
+    background: radial-gradient(
+      circle,
+      rgba(170, 210, 186, 0.8015581232492998) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
-  button {
+  button:not(.star) {
     width: 6rem;
     border-radius: var(--main-border-radius);
     height: 1.5rem;
@@ -21,7 +26,7 @@
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     font-family: var(--paragraph-font);
   }
-  button:hover {
+  button:not(.star):hover {
     background-color: #6b8676;
     cursor: pointer;
   }
@@ -75,7 +80,12 @@ main {
   display: flex;
   /* height: 100rem; */
   .filtres {
-    background-color: var(--secondary-color);
+    background: rgb(142, 158, 171);
+    background: radial-gradient(
+      circle,
+      rgba(142, 158, 171, 1) 0%,
+      rgba(238, 242, 243, 1) 100%
+    );
     padding: 2rem;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
@@ -94,6 +104,9 @@ main {
   }
   /* Lubin code */
   .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     h2 {
       font-family: var(--title-font);
       font-size: 2.2rem;
@@ -114,7 +127,12 @@ main {
       -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.45);
       border-radius: var(--main-border-radius);
-      background-color: var(--secondary-color);
+      background: rgb(142, 158, 171);
+      background: linear-gradient(
+        0deg,
+        rgba(142, 158, 171, 1) 0%,
+        rgba(238, 242, 243, 1) 100%
+      );
       margin: auto;
       display: flex;
       padding: 0.5rem 2rem;
@@ -154,7 +172,9 @@ main {
         justify-content: center;
         direction: rtl;
         .star {
-          color: #aaa;
+          border: none;
+          background-color: transparent;
+          color: var(--third-color);
           text-decoration: none;
           font-size: 2rem;
           transition: color 0.4s;
