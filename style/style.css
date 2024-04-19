@@ -102,7 +102,7 @@ main {
     position: sticky;
     top: 0;
     left: 3rem;
-    h3{
+    h3 {
       color: var(--main-color);
       font-family: var(--title-font);
       font-size: x-large;
@@ -110,7 +110,6 @@ main {
     .filtre {
       height: 15rem;
       overflow: scroll;
-
     }
   }
   /* Lubin code */
@@ -250,6 +249,13 @@ footer {
       font-family: var(--paragraph-font);
     }
   }
+
+  /* dialog {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: var(--secondary-color);
+  } */
   div {
     color: var(--main-color);
     display: flex;
@@ -361,4 +367,3 @@ footer {
     }
   }
 }
-
