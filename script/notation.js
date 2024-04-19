@@ -9,14 +9,10 @@ const takeStorage = () => {
   const storedMemo = JSON.parse(localStorage.getItem('memo'));
   if (storedMemo) {
     memo = storedMemo;
-    memo.forEach(resto => {
-      display(resto)
-    });
   }
 }
-window.onload = () => {
-  takeStorage()
-}
+
+takeStorage()
 
 const manageStars = (idStar, idResto) => {
   const existingResto = memo.findIndex(item => item.idResto === idResto);
@@ -46,50 +42,4 @@ const manageCompteur = (idResto) => {
   }else{
     alert("Vous devez choisir une note de 1 a 5 étoiles")
   }
-  
 }
-
-  
-  
-
-  // Mise à jour dans le localstorage en stadn By
-
-    // A faire au chargement de la page
-  // window.onload = () => {
-  //   // récupération des notes attribuées
-  //   const recupMemo = localStorage.getItem('memo_current_resto');
-  //   //Si il y a des éléments dans le tableau note attribuées 
-  //   if (recupMemo) {
-  //     //transforme les donées en nombre
-  //     const recupMemoNombre = parseFloat(recupMemo);
-  //     //affiche la note moyenne définie dans le local storage
-  //     noteFinale.innerHTML = `${notation.toFixed(0)}/5`;
-  //   }
-  //   // récupération du nombre d'avis
-  //   const compteurAvis = localStorage.getItem('compteur_avis');
-  //   //Si il y a des éléments dans le tableau nombre d'avis 
-  //   if (compteurAvis) {
-  //     //transforme les donées en nombre
-  //     const compteurAvisNombre = parseInt(compteurAvis)
-  //     //affiche le nombre d'avis défini dans le local storage
-  //     compteur.innerHTML = `${compteurAvisNombre} avis`
-  //     //ajoute la valeur à la variable count pour ne pas réinitialiser la note après une nouvelle notation
-  //     count = compteurAvisNombre
-  //   }
-  // };
-    // const nbAvis = () => {
-  //   count++
-  //   compteur.innerHTML = `${count} avis`
-  //   //stockage du nombre d'avis dans le local storage
-  //   // 
-    
-  // }
-  // const calculNote = () => {
-  //   totalNote.push(note)
-  //   some = totalNote.reduce((acc, currentValue) => acc + currentValue)
-  //   notation = some / totalNote.length
-  //   noteFinale.innerHTML=`${notation.toFixed(0)}/5`
-  //   note = 0
-  //   // //stockage des notes attribuées dans le local storage
-  //   // localStorage.setItem('note_moyenne', notation);
-  // }
