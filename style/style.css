@@ -111,7 +111,6 @@ main {
     .filtre {
       height: 15rem;
       overflow: scroll;
-
     }
   }
   .articles {
@@ -251,6 +250,13 @@ footer {
       font-family: var(--paragraph-font);
     }
   }
+
+  /* dialog {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: var(--secondary-color);
+  } */
   div {
     color: var(--main-color);
     display: flex;
@@ -367,4 +373,3 @@ footer {
     }
   }
 }
-
