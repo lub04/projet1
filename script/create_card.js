@@ -76,6 +76,11 @@ const render = () => {
       ) {
         const article = createCard(restaurants[i]);
         section.appendChild(article);
+        const resto = memo.find(el => el.idResto === +restaurants[i].idResto);
+        console.log(resto)
+        if (resto){
+          display(resto)
+        }
       }
     }
   }
